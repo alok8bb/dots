@@ -1,0 +1,93 @@
+general {
+
+        colors = true
+
+        interval = 1
+
+	separator = "|"
+
+	color_good = "#B4FF9F"
+
+	color_degraded = "#FFE59D"
+
+  	color_bad = "#F24C4C"
+
+}
+
+order += "wireless _first_"
+
+order += "ethernet _first_"
+
+order += "battery all"
+
+order += "volume master"
+
+order += "memory"
+
+order += "tztime local"
+
+wireless _first_ {
+
+        format_up = "W: (%quality at %essid)"
+
+        format_down = "W: down"
+
+}
+
+ethernet _first_ {
+
+        format_up = "E: (%speed)"
+
+        format_down = ""
+
+}
+
+battery all {
+
+        format = "%status %percentage %remaining"
+
+	low_threshold = 20
+
+	last_full_capacity = true
+
+}
+
+disk "/" {
+
+        format = "%avail"
+
+}
+
+load {
+
+        format = "%1min"
+
+}
+
+memory {
+
+        format = "%used"
+
+        threshold_degraded = "1G"
+
+        format_degraded = "MEMORY < %available"
+
+}
+
+tztime local {
+
+        format = "%d-%b %H:%M:%S"
+
+}
+
+volume master { 
+
+	format = "V: %volume"
+
+	format_muted = "V: muted"
+
+	device = "pulse:alsa_output.pci-0000_03_00.6.analog-stereo"
+
+}
+
+
