@@ -1,3 +1,7 @@
+-- TODO 
+-- 1. Add keybinding to toggle fullscreen 
+-- 2. Find other layouts 
+
 -- Default 
 import System.Exit
 import XMonad 
@@ -19,6 +23,9 @@ import XMonad.Layout.Gaps
 
 import Data.Monoid
 import Data.Function
+import XMonad.Layout.NoBorders
+import XMonad.Layout.Spacing
+import XMonad.Layout.ToggleLayouts
 
 main :: IO ()
 main = xmonad 
@@ -48,6 +55,8 @@ myConfig = def
     , ("M-S-l", sendMessage NextLayout)              -- change layouts 
     , ("M-S-c", io (exitWith ExitSuccess))         -- exit xmonad
     , ("<Print>", spawn "flameshot gui")
+    
+    , ("M-f", sendMessage (Toggle "Full"))
 
     -- Audio and Brightness 
     , ("<XF86AudioMute>", spawn "pamixer -t")
@@ -60,7 +69,8 @@ myConfig = def
 myManageHook :: ManageHook 
 myManageHook = composeAll 
     [ resource =? "desktop_window"  --> doIgnore
-    , isDialog                      --> doFloat
+    , isDialog                      --> doCenterFloat 
+    , className =? "TelegramDesktop" <&&> title =? "Media viewer" --> doFloat
     ]
 
 myXmobarPP :: PP  
@@ -93,7 +103,7 @@ myXmobarPP = def
 
 myGaps              = [(U, 10), (D, 10), (L, 10), (R, 10)]
 
-myLayout = tiled ||| Mirror tiled ||| Full -- &
+myLayout = smartBorders $ toggleLayouts Full (tiled ||| Mirror tiled ||| Full) -- &
         -- gaps myGaps 
     where
         tiled   = Tall nmaster delta ratio

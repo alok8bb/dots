@@ -1,7 +1,7 @@
 Config { overrideRedirect = False
     , font      = "xft:JetBrainsMono Nerd Font-10:antialias=true"
-    , bgColor   = "5f5f5f"
-    , fgColor   = "#f8f8f2"
+    , bgColor   = "black"
+    , fgColor   = "white"
     , position  = Bottom
     , commands  = [ Run Cpu
                     [ "-L"       , "3"
