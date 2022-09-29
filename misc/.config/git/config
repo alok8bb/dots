@@ -1,0 +1,19 @@
+[user]
+	name = alok8bb
+	email = alok8bb@gmail.com
+	signingkey = /home/alok/.ssh/github_key.pub
+[ui "color"]
+	ui = always
+[color]
+	ui = true
+[github]
+	user = alok8bb
+[init]
+	defaultBranch = main
+[alias]
+	logp = log --decorate --graph
+
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true

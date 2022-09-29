@@ -121,4 +121,4 @@ schemes:
       cyan:    '#7fdbca'
       white:   '#d6deeb'
 
-colors: *tomorrow_night
+colors: *moonfly
