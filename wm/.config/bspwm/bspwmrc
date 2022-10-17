@@ -17,3 +17,4 @@ bspc config single_monocle 	 true
 
 bspc rule -a Firefox desktop='^2'
 bspc rule -a Discord desktop='^2'
+bspc rule -a Emacs state=tiled

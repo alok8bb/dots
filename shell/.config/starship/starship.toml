@@ -1,6 +1,9 @@
 add_newline = true
 
 [character]
-success_symbol = "[Λ](green)"
-error_symbol = "[Λ](red)"
+success_symbol = "[Λ](bold blue)"
+error_symbol = "[Λ](bold red)"
+
+[lua]
+format = "via [ $version](bold blue)"
 
