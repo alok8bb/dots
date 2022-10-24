@@ -1,7 +1,7 @@
 [user]
 	name = alok8bb
 	email = alok8bb@gmail.com
-	signingkey = /home/alok/.ssh/github_key.pub
+	signingkey = /home/alok/.ssh/gitkey.pub
 [ui "color"]
 	ui = always
 [color]

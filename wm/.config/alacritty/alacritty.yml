@@ -1,18 +1,18 @@
 env: 
   TERM: alacritty
 window:
-  dynamic_padding: false 
+  dynamic_padding: false
   padding:
     x: 15
-    y: 15
+    y: 0
   opacity: 1
 
 font:
   offset:
     y: 0
   normal:
-    family: Cousine Nerd Font 
-  size: 13
+      family: RobotoMono Nerd Font 
+  size: 11
 
 mouse:
   hide_when_typing: true
@@ -26,4 +26,4 @@ cursor:
 draw_bold_text_with_bright_colors: true
 
 import:
-  - ~/.config/alacritty/themes/ayu_dark.yml
+  - ~/.config/alacritty/themes/base16-irblack.yml
