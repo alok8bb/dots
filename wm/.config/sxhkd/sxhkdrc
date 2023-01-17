@@ -143,13 +143,13 @@ Print
     flameshot gui 
 
 super + shift + Return 
-    firefox
+	firefox 
 
 super + shift + p
     pcmanfm 
 
 super + shift + w 
-    feh --bg-fill --randomize ~/Wallpapers/Mountains/ 
+    feh --bg-fill --randomize ~/Wallpapers/ 
 
 super + shift + d 
     evince 
